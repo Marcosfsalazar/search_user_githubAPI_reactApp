@@ -1,3 +1,15 @@
+/*vars*/
+:root{
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  --pBlack: #2B2D42;
+  --pPink: #E86A92;
+  --pBlue: #41E2BA;
+  --pYellow: #F7E733;
+  --pWhite: #F7F7F9;
+}
+
+/*reset*/
 *{
   padding: 0;
   margin: 0;
@@ -14,29 +26,114 @@ body{
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: lightyellow;
+  background-color: var(--pBlue);
+  font-family: var(--font);
 }
 
 ol,ul{
   list-style: none;
 }
 
-button{
-  background-color: #aaa;
-  border: 1px solid black;
-  margin: 4px;
-  padding: 4px;
+a{
+  color: inherit;
+  text-decoration: none;
 }
 
+button{
+  background-color: var(--pBlack);
+  color: var(--pWhite);
+  border: 2px solid black;
+  border-radius: 4px;
+  margin: 4px;
+  padding: 6px;
+  font-weight: bold;
+}
+
+button:hover{
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px var(--pBlack);
+}
+
+/*app body*/
+.app{
+  margin-top: 4px;
+  box-shadow: 1px 1px 1px 1px var(--pBlack);
+  padding: 1.680rem;
+}
+
+/*generics*/
+.flex-column{
+  position: flex;
+  flex-direction: column;
+}
+
+/*search*/
 .search input{
   width: 450px;
   height: 2.6rem;
   border: .5px solid black;
   border-radius: 4px;
-  margin: 4px;
+  padding: 4px;
+  margin-bottom: 1.680rem;
+}
+
+/*user info*/
+.user-info{
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name{
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .profile-pic{
+  align-self: center;
   border-radius: 50%;
-  max-width: 250px;
+  max-width: 200px;
+  margin-bottom: 1.680rem;
 }
+
+.repos-info{
+  background-color: var(--pBlack);
+  box-shadow: 1px 1px 1px 1px var(--pBlack);
+  border-radius:4px;
+  color: var(--pWhite);
+  font-weight: bold;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+/*button container*/
+
+.actions{
+  margin-bottom: 1.6180rem;
+}
+
+/*repos*/
+.repos{
+  border: 2px solid var(--pBlack);
+}
+
+.repo-text{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1.680rem;
+}
+
+.repo-content{
+  padding: 16px;
+  margin: 0.20rem;
+  border: 2px solid var(--pBlack);
+  background-color: var(--pPink);
+  font-weight: bold;
+}
+
+.repo-content:hover{
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px var(--pBlack);
+  text-shadow: .5px .5px var(--pBlack);
+}
+
+
